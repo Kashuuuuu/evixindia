@@ -1,0 +1,126 @@
+{% extends "b.html" %}
+
+{% block content %}
+<style>
+    .dealerbackground {
+        width: 100vw;
+        height: 500px;
+        position: relative;
+        background-image: url(/static/images/becomeDealer.jpg);
+        background-size: cover;
+        margin-top: 80px;
+    }
+     </style>
+
+     <div class="dealerbackground">
+        x
+    </div>
+</header>
+
+    <!-- BODY section   -->
+    <section id="surrounding-background_design" style="background-color:white;margin-top:-4px">
+        <!-- top part   -->
+        <div class="first">
+            <h1 style="color: rgb(128, 28, 36);margin-top: 30px;">BECOME A DEALER</h1>
+            <hr style="width:30% ;">
+            <h3 style="color:rgb(106, 43, 43);">
+                We always look forward to zealous individuals who want to take this initiative forward. This is
+                your perfect opportunity to join the next big thing in the EV industry.
+            </h3> <br>
+            <p style="color:black;">
+                You can file your applications by filling the dealership form below and sending it by
+                courier or filling it online here
+            </p>
+        </div>
+
+        <!-- bottom part  -->
+        <div class="container" id="second-background_design">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="firstName">Full Name</label>
+                        <input type="text" name="name" class="form-control" id="firstName" size="70" placeholder="your name here">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="phno">Mobile</label>
+                        <input type="mobile" name="mobile" class="form-control" id="phno" size="74" placeholder="+11 01234 56789">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" size="70" placeholder="xyz@gmail.com">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="webb">Website</label>
+                        <input type="text" name="website" class="form-control" id="webb" size="74">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="org">Organisation</label>
+                        <input type="text" name="organisation" class="form-control" id="org" size="160" placeholder="XYZ">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="city">City</label>
+                        <input type="text" name="city" class="form-control" id="city" size="160" placeholder="ex. (New York)">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="pf">Proposed Firm</label>
+                        <input type="text" name="firm" class="form-control" id="pf" size="160">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="gstno">GST No.</label>
+                        <input type="text" name="gst" class="form-control" id="gstno" size="160">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="accno">Account Number</label>
+                        <input type="text" name="account" class="form-control" id="accno" size="70" placeholder="account number here">
+                    </div>
+                    <div class="form-group col-md-6 px-3">
+                        <label for="ifsccode">IFSC Code</label>
+                        <input type="text" name="ifsc" class="form-control" id="ifsccode" size="72" placeholder="ifsc code here">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6 px-3">
+                        <label for="accholder">Account Holder</label>
+                        <input type="text" name="accountholder" class="form-control" id="accholder" size="160"
+                            placeholder="holder name here">
+                    </div>
+                </div>
+
+                <div class="form-group px-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="declare">
+                        <label class="form-check-label" for="declare">
+                            I/ We fully understand that , in case any information provided by me/us herein is found to
+                            be false or incorrect , EVEX India . reserves the right to reject the application or reverse
+                            any decision taken on this information .
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button py-4 px-3">
+                    <input type="submit" class="button1" value="Submit" />
+                    <input type="reset" class="button2" value="reset" />
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+
+
+
+{% endblock content %}

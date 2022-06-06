@@ -1,0 +1,2210 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content-body">
+    <div class="container-fluid">
+     <div class="row page-titles mx-0">
+      <div class="col-sm-6 p-md-0">
+       <div class="welcome-text">
+        <h4>
+  Dealer
+        </h4>
+       </div>
+      </div>
+      <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+      </div>
+     </div>
+    
+      <div class="col-lg-12">
+       <div class="row tab-content">
+        <div class="tab-pane fade active show col-lg-12" id="list-view">
+         <div class="card"> 
+          <div class="card-header">
+            {% comment %} <h4 class="card-title">
+            All Contact List
+           </h4>  {% endcomment %}
+           <div class="card-body custom-tab-1">
+            {% comment %} <ul class="nav nav-tabs mb-3">
+              <li class="nav-item">
+               <a class="nav-link pb-2 active show" data-toggle="tab" href="#my-posts">
+                Professors
+               </a>
+              </li>
+              <li class="nav-item">
+               <a class="nav-link pb-2" data-toggle="tab" href="#about-me">
+                Librarian
+               </a>
+              </li>
+              <li class="nav-item">
+               <a class="nav-link pb-2" data-toggle="tab" href="#profile-settings">
+                Other
+               </a>
+              </li>
+             </ul> {% endcomment %}
+             <div class="tab-content">
+              <div class="tab-pane fade active show" id="my-posts">
+               <div class="table-responsive">
+                <table class="table table-responsive-md">
+                 <thead>
+                  <tr>
+                   <th scope="col">
+                    #
+                   </th>
+                   <th scope="col">
+                    Name
+                   </th>
+                   <th scope="col">
+                    Email
+                   </th>
+                   <th scope="col">
+                    Phone
+                   </th>
+                   <th scope="col">
+                    Website
+                   </th>
+                   <th scope="col">
+                    Organisation
+                   </th>
+                   <th scope="col">
+                    City
+                   </th>
+                   <th scope="col">
+                    Firm
+                   </th>
+                   <th scope="col">
+                    Gst
+                   </th>
+                   <th scope="col">
+                    Account
+                   </th>
+                   <th scope="col">
+                    IFSC
+                   </th>
+                   <th scope="col">
+                    Account Holder
+                   </th>
+                   {% comment %} <th scope="col">
+                    Date
+                    </th> {% endcomment %}
+                  </tr>
+                 </thead>
+                 <tbody>
+                     {% for n in data %}
+                     
+                    
+                  <tr>
+                   <td>
+                   {{forloop.counter}}
+                   </td>
+                   <td>
+                     {{n.name}}
+                   </td>
+                   <td>
+                   
+                     {{n.email}}
+                
+                   </td>
+                   <td>
+                     {{n.mobile}}
+                   </td>
+                   <td>
+                     {{n.website}}
+                   </td>
+                   <td>
+                     {{n.organisation}}
+                   </td>
+                   <td>
+                    {{n.city}}
+                   </td>
+                   <td>
+                     {{n.firm}}
+                   </td>
+                   <td>
+                     {{n.gst}}
+                   </td>
+                   <td>
+                    {{n.account}}
+                  </td>
+                  <td>
+                    {{n.ifsc}}
+                  </td>
+                  <td>
+                    {{n.accountholder}}
+                  </td>
+                 
+                   {% comment %} <td>
+                     {{n.date_joined|date:"d-m-Y"}}
+                   </td> {% endcomment %}
+                  </tr>
+                  {% endfor %}
+                  
+                 </tbody>
+                </table>
+               </div>
+              </div>
+            
+             </div>
+            </div>
+ 
+          </div>
+          </div>
+          {% comment %} <div class="card-body">
+           <div class="table-responsive">
+            <table class="display" id="example3" style="min-width: 845px">
+             <thead>
+              <tr>
+               <th>
+                #
+               </th>
+               <th>
+                Firstname
+               </th>
+               <th>
+                Lastname
+               </th>
+               <th>
+                Email
+               </th>
+               <th>
+                Phone
+               </th>
+               <th>
+                Services
+               </th>
+               <th>
+                Query
+               </th>
+               
+              </tr>
+             </thead>
+             <tbody>
+                 {% for n in data %}
+                 
+               
+              <tr>
+              
+               <td>
+                <strong>
+                {{forloop.counter}}
+                </strong>
+               </td>
+               <td>
+                {{n.firstname}}
+               </td>
+               <td>
+                {{n.lastname}}
+               </td>
+              
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="fe97909891be9b869f938e929bd09d9193">
+                    {{n.email}}
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                {{n.mobile}}
+               </td>
+               <td>
+                {{n.service}}
+               </td>
+
+               <td>
+                {{n.enquiry}}
+               </td>
+               
+               
+              </tr>
+              {% endfor %}
+              {% comment %} <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic2.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 02
+                </strong>
+               </td>
+               <td>
+                Garrett Winters
+               </td>
+               <td>
+                M.COM., P.H.D.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="87eee9e1e8c7e2ffe6eaf7ebe2a9e4e8ea">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2011/07/25
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic3.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 03
+                </strong>
+               </td>
+               <td>
+                Ashton Cox
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="472e29212807223f262a372b226924282a">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2009/01/12
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic4.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 04
+                </strong>
+               </td>
+               <td>
+                Cedric Kelly
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="85ecebe3eac5e0fde4e8f5e9e0abe6eae8">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/03/29
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic5.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 05
+                </strong>
+               </td>
+               <td>
+                Airi Satou
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="20494e464f604558414d504c450e434f4d">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2008/11/28
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic6.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 06
+                </strong>
+               </td>
+               <td>
+                Brielle Williamson
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="761f18101936130e171b061a135815191b">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/12/02
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic7.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 07
+                </strong>
+               </td>
+               <td>
+                Herrod Chandler
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="d7beb9b1b897b2afb6baa7bbb2f9b4b8ba">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/08/06
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic8.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 08
+                </strong>
+               </td>
+               <td>
+                Rhona Davidson
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="31585f575e715449505c415d541f525e5c">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/10/14
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic9.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 09
+                </strong>
+               </td>
+               <td>
+                Colleen Hurst
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="066f68606946637e676b766a632865696b">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2009/09/15
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic10.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 10
+                </strong>
+               </td>
+               <td>
+                Sonya Frost
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="70191e161f301508111d001c155e131f1d">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2008/12/13
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic1.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 11
+                </strong>
+               </td>
+               <td>
+                Jena Gaines
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="a2cbccc4cde2c7dac3cfd2cec78cc1cdcf">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2008/12/19
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic2.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 12
+                </strong>
+               </td>
+               <td>
+                Quinn Flynn
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="076e69616847627f666a776b622964686a">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2013/03/03
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic3.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 13
+                </strong>
+               </td>
+               <td>
+                Charde Marshall
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="c3aaada5ac83a6bba2aeb3afa6eda0acae">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2008/10/16
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic4.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 14
+                </strong>
+               </td>
+               <td>
+                Haley Kennedy
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="9af3f4fcf5daffe2fbf7eaf6ffb4f9f5f7">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/12/18
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic5.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 15
+                </strong>
+               </td>
+               <td>
+                Tatyana Fitzpatrick
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="d7beb9b1b897b2afb6baa7bbb2f9b4b8ba">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/03/17
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic6.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 16
+                </strong>
+               </td>
+               <td>
+                Michael Silva
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="650c0b030a25001d04081509004b060a08">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/11/27
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic7.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 17
+                </strong>
+               </td>
+               <td>
+                Paul Byrd
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="bad3d4dcd5fadfc2dbd7cad6df94d9d5d7">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/06/09
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic8.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 18
+                </strong>
+               </td>
+               <td>
+                Gloria Little
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="aec7c0c8c1eecbd6cfc3dec2cb80cdc1c3">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2009/04/10
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic9.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 19
+                </strong>
+               </td>
+               <td>
+                Bradley Greer
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="6b02050d042b0e130a061b070e45080406">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/10/13
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic10.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 20
+                </strong>
+               </td>
+               <td>
+                Dai Rios
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="cca5a2aaa38ca9b4ada1bca0a9e2afa3a1">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2012/09/26
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic1.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 21
+                </strong>
+               </td>
+               <td>
+                Jenette Caldwell
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="bfd6d1d9d0ffdac7ded2cfd3da91dcd0d2">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2011/09/03
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic2.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 22
+                </strong>
+               </td>
+               <td>
+                Yuri Berry
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="8de4e3ebe2cde8f5ece0fde1e8a3eee2e0">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2009/06/25
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic3.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 23
+                </strong>
+               </td>
+               <td>
+                Caesar Vance
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="fa93949c95ba9f829b978a969fd4999597">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2011/12/12
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic4.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 24
+                </strong>
+               </td>
+               <td>
+                Doris Wilder
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="3b52555d547b5e435a564b575e15585456">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/09/20
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic5.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 25
+                </strong>
+               </td>
+               <td>
+                Angelica Ramos
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="85ecebe3eac5e0fde4e8f5e9e0abe6eae8">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2009/10/09
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic6.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 26
+                </strong>
+               </td>
+               <td>
+                Gavin Joyce
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="e38a8d858ca3869b828e938f86cd808c8e">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/12/22
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic7.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 27
+                </strong>
+               </td>
+               <td>
+                Jennifer Chang
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="bbd2d5ddd4fbdec3dad6cbd7de95d8d4d6">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/11/14
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic8.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 28
+                </strong>
+               </td>
+               <td>
+                Brenden Wagner
+               </td>
+               <td>
+                B.TACH, M.TACH
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  123 456 7890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="325b5c545d72574a535f425e571c515d5f">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2011/06/07
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic9.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 29
+                </strong>
+               </td>
+               <td>
+                Fiona Green
+               </td>
+               <td>
+                B.A, B.C.A
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  987 654 3210
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="40292e262f002538212d302c256e232f2d">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2010/03/11
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr>
+              <tr>
+               <td>
+                <img alt="" class="rounded-circle" src="images/profile/small/pic10.jpg" width="35"/>
+               </td>
+               <td>
+                <strong>
+                 30
+                </strong>
+               </td>
+               <td>
+                Shou Itou
+               </td>
+               <td>
+                B.COM., M.COM.
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  (123) 4567 890
+                 </strong>
+                </a>
+               </td>
+               <td>
+                <a href="javascript:void(0);">
+                 <strong>
+                  <span class="__cf_email__" data-cfemail="2a43444c456a4f524b475a464f04494547">
+                   [email protected]
+                  </span>
+                 </strong>
+                </a>
+               </td>
+               <td>
+                2011/08/14
+               </td>
+               <td>
+                <a class="btn btn-sm btn-primary" href="javascript:void(0);">
+                 <i class="la la-pencil">
+                 </i>
+                </a>
+                <a class="btn btn-sm btn-danger" href="javascript:void(0);">
+                 <i class="la la-trash-o">
+                 </i>
+                </a>
+               </td>
+              </tr> {% endcomment %}
+             </tbody>
+            </table>
+           </div>
+          {% comment %} </div>  {% endcomment %}
+
+         
+        </div>
+        <div class="tab-pane fade col-lg-12" id="grid-view">
+         <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic2.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Alexander
+              </h3>
+              <p class="text-muted">
+               M.COM., P.H.D.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 02
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="8de4e3ebe2cde8f5ece0fde1e8a3eee2e0" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic3.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Elizabeth
+              </h3>
+              <p class="text-muted">
+               B.COM., M.COM.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 03
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="3e575058517e5b465f534e525b105d5153" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          {% comment %} <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic4.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Amelia
+              </h3>
+              <p class="text-muted">
+               M.COM., P.H.D.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 04
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="b1d8dfd7def1d4c9d0dcc1ddd49fd2dedc" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic5.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Charlotte
+              </h3>
+              <p class="text-muted">
+               B.COM., M.COM.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 05
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="d4bdbab2bb94b1acb5b9a4b8b1fab7bbb9" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic6.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Isabella
+              </h3>
+              <p class="text-muted">
+               B.A, B.C.A
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 06
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="c3aaada5ac83a6bba2aeb3afa6eda0acae" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic7.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Sebastian
+              </h3>
+              <p class="text-muted">
+               M.COM., P.H.D.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 07
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="d1b8bfb7be91b4a9b0bca1bdb4ffb2bebc" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic8.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Olivia
+              </h3>
+              <p class="text-muted">
+               B.COM., M.COM.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 08
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="4a23242c250a2f322b273a262f64292527" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic9.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Emma
+              </h3>
+              <p class="text-muted">
+               B.A, B.C.A
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 09
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="9af3f4fcf5daffe2fbf7eaf6ffb4f9f5f7" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+           <div class="card card-profile">
+            <div class="card-header justify-content-end pb-0">
+             <div class="dropdown">
+              <button class="btn btn-link" data-toggle="dropdown" type="button">
+               <span class="dropdown-dots fs--1">
+               </span>
+              </button>
+              <div class="dropdown-menu dropdown-menu-right border py-0">
+               <div class="py-2">
+                <a class="dropdown-item" href="javascript:void(0);">
+                 Edit
+                </a>
+                <a class="dropdown-item text-danger" href="javascript:void(0);">
+                 Delete
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="card-body pt-2">
+             <div class="text-center">
+              <div class="profile-photo">
+               <img alt="" class="img-fluid rounded-circle" src="images/profile/small/pic10.jpg" width="100"/>
+              </div>
+              <h3 class="mt-4 mb-1">
+               Jackson
+              </h3>
+              <p class="text-muted">
+               M.COM., P.H.D.
+              </p>
+              <ul class="list-group mb-3 list-group-flush">
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span>
+                 Roll No.
+                </span>
+                <strong>
+                 10
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Phone No. :
+                </span>
+                <strong>
+                 +01 123 456 7890
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Admission Date. :
+                </span>
+                <strong>
+                 01 July 2021
+                </strong>
+               </li>
+               <li class="list-group-item px-0 d-flex justify-content-between">
+                <span class="mb-0">
+                 Email:
+                </span>
+                <strong>
+                 <a class="__cf_email__" data-cfemail="036a6d656c43667b626e736f662d606c6e" href="/cdn-cgi/l/email-protection">
+                  [email protected]
+                 </a>
+                </strong>
+               </li>
+              </ul>
+              <a class="btn btn-outline-primary btn-rounded mt-3 px-4" href="about-student.html">
+               Read More
+              </a>
+             </div>
+            </div>
+           </div>
+          </div> {% endcomment %}
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+
+
+{% endblock content %}

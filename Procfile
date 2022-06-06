@@ -1,0 +1,1 @@
+web: gunicorn evixindia.wsgi --log-file -

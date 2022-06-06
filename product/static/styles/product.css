@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  font-size: 16px;
+}
+body {
+  background-color: black !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  75% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  75% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-in-out;
+}
+.slide-in-right {
+  animation: slideInRight 0.6s ease-in-out;
+}
+.fixed-social-icons{
+  position: fixed;
+  top: 30%;
+  right: 0;
+  z-index: 10;
+}
+.fixed-social-icons ul{
+  margin: 0;
+  padding: 5px 17px;
+}
+.social-icon{
+  margin: 10px 0;
+  cursor: pointer;
+}
+.social-icon i{
+  font-size: 1.5rem;
+}
+.navbar {
+  padding: 0 !important;
+  height: 80px !important;
+  background-color: white !important;
+  transition: all 0.3s ease;
+  color: white !important;
+}
+.fa-bars {
+  font-size: 2rem;
+}
+
+ul.navbar-ul {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 0 0;
+}
+.nav-item {
+  margin: 0px 20px;
+  text-transform: uppercase;
+}
+.show ul li {
+  margin: 5px;
+}
+.nav-link {
+  /* color: black !important; */
+  transition: all 0.3s ease;
+  font-weight: 600 !important;
+  letter-spacing: 1px;
+}
+.model {
+  color: red !important;
+}
+.dropdown-menu {
+  overflow: hidden;
+}
+.dropdown-menu li {
+  margin: 5px 0;
+}
+.dropdown-menu li a {
+  color: white;
+}
+.dropdown-item {
+  text-transform: capitalize;
+  font-family: "Montserrat";
+  color: black !important;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.dropdown-item:hover {
+  color: white !important;
+  transform: scale(1.1);
+  background-color: #bb2f37 !important;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.nav-link:hover {
+  color: #bb2f37 !important;
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 992px) {
+  .dealer-btn {
+    display: none;
+  }
+}
+
+
+
+/* HERO */
+.hero {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: black url("assets/hero.png") center/cover no-repeat;
+  position: absolute;
+  top: 80px;
+  z-index: -1;
+  opacity: 0.4;
+}
+.row {
+  margin: 0 !important;
+}
+.company-name {
+  font-size: 5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 70px;
+  text-align: center;
+}
+.company-more-info {
+  font-size: 15px;
+  padding: 0 7rem !important;
+}
+.company-more-info .title {
+  font-size: 2.5em;
+}
+.company-more-info .description {
+  font-size: 1.5em;
+  color: rgb(216, 216, 216);
+}
+
+/* Product */
+.product {
+  background: white;
+  width: 100%;
+  /* height: 400px; */
+  /* border-bottom: 2px dashed black; */
+}
+.product .row {
+  flex-wrap: nowrap !important;
+}
+.product-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    black 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 13px 1px;
+  background-repeat: repeat-x;
+}
+@media screen and (max-width: 992px) {
+  .product-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.product-info .title {
+  line-height: 50px;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+.product .description {
+  font-size: 16px;
+  line-height: 28px;
+  color: rgb(102, 102, 102);
+}
+.product-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-img img {
+  width: 100%;
+  height: 100%;
+}
+.card {
+  border: none !important;
+}
+
+
+/* back to top  */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  display: none;
+}
+#leave-message {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

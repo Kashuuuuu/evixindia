@@ -1,0 +1,80 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  /* padding: 3px; */
+}
+
+.first {
+  margin: 5px;
+  padding: 40px;
+  /* color: rgb(128, 28, 36); */
+  color: rgb(167, 65, 65);
+  font-size: larger;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #555;
+  padding-left: 2px;
+}
+#service,#enquiry{
+  border-radius: 5px;
+  border: 1px solid #555;
+  padding-left: 2px;
+  margin-left:-10px;
+}
+
+
+
+.second{
+  margin:3em 0em;
+  color:blueviolet;
+}
+.column2 {
+  padding-top: 1em;
+  padding-left: 2.5em;
+  padding-bottom: 1.5em;
+  margin-left: 4em;
+  /* background-color: rgb(164, 229, 238); */
+  background-color: #ebe5e5;
+  border-radius: 12px;
+}
+
+.button1{
+  background-color: white;
+  padding: 2px 32px 2px 32px;
+  font-size: larger;
+  color: black;
+}
+
+.button1:hover {
+  background-color: white;
+  background-color: rgba(128, 28, 36, 0.9);
+  color: white;
+}
+
+.button2 {
+  background-color: rgb(128, 28, 36);
+  padding: 2px 32px 2px 32px;
+  font-size: larger;
+  color: white;
+}
+
+.contactbackground {
+  width: 100vw;
+  height: 500px;
+  position: relative;
+  background-image: url("images/Contact_us.jpg");
+  background-size: cover;
+  margin-top: 80px;
+}
+
+
+
+
+footer .logo-container {
+  margin-bottom: 20px;
+}
+footer .about {
+  margin-top: -15px;
+}

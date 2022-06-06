@@ -1,0 +1,66 @@
+*{
+    margin-left: 0px;
+}
+
+.dealerbackground{
+    width: 100vw;
+    height: 500px;
+    position: relative;
+    background-image: url("images/becomeDealer.jpg");
+    background-size: cover;
+    margin-top: 80px;
+}
+
+.first{
+    margin: 5px;
+    padding: 50px;
+    color: rgb(128, 28, 36);
+    font-size: larger;
+}
+
+input{
+    border-radius: 5px;
+    border: 1px solid rgb(111, 110, 110);
+    padding-left: 4px;
+    padding: 5px;
+}
+
+form{
+    margin: 35px;
+}
+
+label{
+    font-weight: 600;
+}
+
+
+#surrounding-background_design{
+    background-image: url(/images/symphony-design.png);
+    background-repeat: repeat;
+    margin-bottom: 0;
+    padding-bottom: 3em;
+}
+
+#second-background_design{
+    background-image: url(/images/washi-design.webp);
+}
+
+
+.button1{
+    background-color: rgb(128, 28, 36);
+    padding: 2px 32px 2px 32px;
+    font-size: larger;
+    color: white;
+}
+
+.button2{
+    background-color:white;
+    padding: 2px 32px 2px 32px;
+    font-size: larger;
+    color: black; 
+}
+.button2:hover{
+    background-color:white ;
+    background-color: rgb(128, 28, 36);
+    color: white;
+}

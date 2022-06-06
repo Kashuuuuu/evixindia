@@ -1,0 +1,222 @@
+{% extends 'b.html' %}
+
+{% block content %}
+<style> 
+    .background1 {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        background-image: url(/static/images/firstImage.webp);
+        background-size: cover;}
+</style>
+
+</header>
+
+<div class="col" style="background:white;">
+    <div class="row">
+        <div class="background1 " style="display: flexbox;">
+            here i am
+        </div>
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row g-0 container my-product-container">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                        <img src="/static/images/rotate.gif" alt="95" />
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 100px;">
+
+                        <p class="description">
+                            Modern design Smooth contours, bright colours- a combination of fashion and luxury.
+                            Whether young or old, man or woman: you will love EK3! This electric scooter is spacious
+                            and comfortable. It was created for everyday use to cover longer distances quickly,
+                            elegantly and economically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="about">
+                <h3>95 <sup>KM/H</sup></h3>
+                MAX.SPEED
+            </div>
+            <div class="about">
+                <h3>6200 <sup>W</sup></h3>
+                MOTOR.MAX
+            </div>
+            <div class="about">
+                <h3>3500<sup>W</sup></h3>
+                MOTOR.RATED
+            </div>
+            <div class="about ">
+                <h3>100<sup>KM</sup></h3>
+                MAX.RANGE
+                <p>(AT 45 KM/H)</p>
+            </div>
+        </section>
+
+        <div class="parabutton pt-4" style="padding-bottom: 40px;">
+            <a href="{% url 'contact' %}" class="btn btn-lg btn-primary" active>More parameters? Contact us! </a>
+        </div>
+
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row g-0 container my-product-container">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 80px;">
+                        <div class="title fw-bold">DRIVING EXPERIENCE AT UP TO 95 KM/H</div>
+                        <p class="description">
+                            The EK3 is fast on the road and achieves a top speed of 95 km/h.
+                            The 14-inch front wheel and 13-inch rear wheel offer excellent
+                            manoeuvrability. Safety is provided by the efficient CBS braking
+                            system. The central motor delivers a consistent and strong
+                            performance. The outstanding ergonomic design and efficient shock
+                            absorption system ensure a comfortable driving experience.
+                        </p>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img ">
+                        <img src="/static/images/95img.jpg" alt="95" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-product d-flex justify-content-center align-items-center thirdimg">
+            <div class="card" style="background-color: black; margin: 0px;
+            padding: 10px; width: 100% ; text-align: left; padding-left: 60%;margin: 0%;">
+                <div class="row g-0 container my-product-container">
+                    <div class="col-xxl-6 col-xl-12 col-lg-6 col-md-12 my-product-info">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img "
+                            style="background-color: black;">
+
+                        </div>
+                        <div class="title fw-bold">HIGHLY EFFICIENT
+                            ECONOMICAL MOTOR</div>
+                        <p class="description">
+                            The EK3 is fast on the road and achieves a top speed of 95 km/h. The 14-inch front wheel
+                            and 13-inch rear wheel offer excellent manoeuvrability. Safety is provided by the
+                            efficient CBS braking system. The central motor delivers a consistent and strong
+                            performance. The outstanding ergonomic design and efficient shock absorption system
+                            ensure a comfortable driving experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-product d-flex justify-content-center align-items-center thirdimg">
+            <div class="card" style="width:auto; padding-top: 10px;" >
+                <div class="row g-0 container my-product-container">
+                    <img src="/static/images/img 3.webp " width="100%" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="my-product d-flex justify-content-center align-items-center ">
+            <div class="card">
+                <div class=" container my-product-container">
+                    <div class="my-product-info">
+
+                        <div class="title fw-bold">BATTERY WITH ITS OWN MANAGEMENT</div>
+                        <p class="description">
+                            The EK3 scooter can be equipped with two lithium-ion batteries that are easily
+                            removable. The battery is supplied 18650 lithium-ion battery cells. The SOC monitoring
+                            system and the modern battery management system can prevent malfunctions. Among other
+                            things, they provide protection against over-charging, discharging, over-voltage, short
+                            circuit and monitor the temperature of the batteries. One battery cell has a capacity of
+                            10.44Wh, the whole battery has 2.88kWh. The battery life is over 1000 cycles. The
+                            standard charging current is 10A. The charging time of one battery is 4 hours. An
+                            intelligent charger is used for this.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row g-0 container my-product-container">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img ">
+                        <img src="/static/images/ek scooter.jpg" style="width: 500px;" alt="95" />
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 100px;">
+                        <div class="title fw-bold" style="text-align: right;">LED DAYTIME RUNNING <br> LIGHT FOR
+                            <br> MORE SAFETY
+                        </div>
+                        <p class="description" style="text-align: right;">
+                            The automatic daytime running light DRL (Daytime Running Light) shines with an intensive
+                            white xenon lamp. This improved lighting brings more safety- especially on rainy and
+                            foggy days. An automatic light switch-off delay lights your way to the garage or
+                            entrance door when you leave the vehicle.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row g-0 container my-product-container">
+
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info">
+                        <div class="title fw-bold" style="text-align: left; padding-top:120px;">SMART PHONE CAN BE CHARGED
+                            <br> WHILE DRIVING
+                        </div>
+                        <p class="description" style="text-align: left;">
+                            While you are cruising with your EK3, you can charge your smart phone on board via the
+                            USB connector. This convenient additional function offers you the security of always
+                            having the
+                            battery of your mobile companion sufficiently full- no matter when and where.
+
+                        </p>
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                        <img src="/static/images/charger.jpg" width="500" alt="95" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="card">
+                <div class="row g-0 container my-product-container">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                        <img src="/static/images/S6-Schlüssel.png" width="600" alt="95" />
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 100px;">
+
+                        <p class="description">
+                            Modern design Smooth contours, bright colours- a combination of fashion and luxury.
+                            Whether young or old, man or woman: you will love EK3! This electric scooter is spacious
+                            and comfortable. It was created for everyday use to cover longer distances quickly,
+                            elegantly and economically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="my-product d-flex justify-content-center align-items-center">
+            <div class="card" style="background-color: grey; width: 100%;">
+                <div class="row g-0 container my-product-container" >
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-img">
+                        <img src="/static/images/invisible.jpg" width="600" alt="95" />
+                    </div>
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 my-product-info" style="padding-top: 70px; padding-left: 80px; margin-bottom: 10px;">
+                        <div class="title fw-bold">CBS BRAKING SYSTEM</div>
+                        <p class="description" style="color: black; padding-top: 20px;">
+                            The CBS braking system will split braking force between the front and rear brake discs
+                            when you brake in an emergency, reducing stopping distance and ensuring a safe brake at
+                            high speeds.
+
+                            The sensitive brakes allow extremely precise handling in and around corners, even in wet
+                            conditions. 220mm front brake disc and 190 mm rear brake disc guarantee safe and
+                            efficient braking in all conditions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock content %}

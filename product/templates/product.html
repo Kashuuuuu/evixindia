@@ -1,0 +1,435 @@
+{% include "head.html" %}
+{% block content %}
+</header>
+<!-- SOCIAL ICONS  -->
+<div class="fixed-social-icons bg-light">
+  <ul class="social-icons">
+    <li class="social-icon"><i class="fa-brands fa-facebook-f"></i></li>
+    <li class="social-icon">
+      <i class="fa-brands fa-instagram-square"></i>
+    </li>
+    <li class="social-icon"><i class="fa-brands fa-linkedin"></i></li>
+    <li class="social-icon"><i class="fa-solid fa-envelope"></i></li>
+  </ul>
+</div>
+<!-- SOCIAL ICONS  -->
+<section class="row">
+  <div class="first-carousel owl-carousel">
+    <div class="owl-item-box ">
+   <div class="hero">
+    <div class="company-name col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+    EVEX <br />
+    India
+  </div>
+  <div class="company-more-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+    <h3 class="title">Lorem</h3>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur
+      nemo, laborum incidunt unde necessitatibus!
+    </p>
+  </div>
+  </div>
+    </div>
+    <div class="owl-item-box">
+   <div class="hero">
+    <div class="company-name col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+    EVEX <br />
+    Japan
+  </div>
+  <div class="company-more-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+    <h3 class="title">Lorem</h3>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur
+      nemo, laborum incidunt unde necessitatibus!
+    </p>
+  </div>
+  </div>
+    </div>
+    <div class="owl-item-box">
+   <div class="hero">
+    <div class="company-name col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+    EVEX <br />
+    Germany
+  </div>
+  <div class="company-more-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+    <h3 class="title">Lorem</h3>
+    <p class="description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius pariatur
+      nemo, laborum incidunt unde necessitatibus!
+    </p>
+  </div>
+  </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products row">
+  <div class="product-container my-5">
+    <div class="container">
+      <div class="heading" style="margin-top:80px;">
+        OUR <br />
+        PRODUCTS
+      </div>
+      {% for n in data %}
+      
+    
+      <div class="card">
+        <div class="row g-0 justify-content-center align-items-center">
+          <div
+            class="product-img col-xxl-6 col-xl-6 col-lg-6 col-md-12 mySwiper"
+          >
+            <div class="swiper-wrapper">
+              <img
+                src="/media/{{n.image1}}"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/media/{{n.image2}}"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/media/{{n.image3}}"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/media/{{n.image4}}"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fa-solid fa-less-than"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="fa-solid fa-greater-than"></i>
+            </div>
+          </div>
+
+          <div class="product-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+            <div class="card-body">
+              <div class="title">{{n.product_name}}</div>
+              <div class="speed-max-speed">
+                <div class="speed">
+                  <h3>{{n.time}}</h3>
+                  <br />
+                  <p>{{n.s1}}</p>
+                </div>
+                <hr />
+                <div class="max-speed">
+                  <h3>{{n.s2}}</h3>
+                  <br />
+                  <p>{{n.speed}}</p>
+                </div>
+              </div>
+              <div class="description">
+                {{n.product_name}}
+              </div>
+              <button class="product-btn">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="dashed">
+      {% endfor %}
+      {% comment %} <div class="card">
+        <div
+          class="row g-0 flex-row-reverse justify-content-center align-items-center"
+        >
+          <div
+            class="product-img col-xxl-6 col-xl-6 col-lg-6 col-md-12 mySwiper"
+          >
+            <div class="swiper-wrapper">
+              <img
+                src="/static/assets/product2.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/static/assets/product2.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/static/assets/product1.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/static/assets/product1.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fa-solid fa-less-than"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="fa-solid fa-greater-than"></i>
+            </div>
+          </div>
+
+          <div class="product-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+            <div class="card-body">
+              <div class="title">Product 2</div>
+              <div class="speed-max-speed">
+                <div class="speed">
+                  <h3>3.5s</h3>
+                  <br />
+                  <p>0-60mph</p>
+                </div>
+                <hr />
+                <div class="max-speed">
+                  <h3>150mph</h3>
+                  <br />
+                  <p>Top Speed</p>
+                </div>
+              </div>
+              <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.oddndndn Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.oddndndn
+              </div>
+              <button class="product-btn">View More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="dashed">
+      <div class="card">
+        <div class="row g-0 justify-content-center align-items-center">
+          <div
+            class="product-img col-xxl-6 col-xl-6 col-lg-6 col-md-12 mySwiper"
+          >
+            <div class="swiper-wrapper">
+              <img
+                src="/static/assets/product1.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/static/assets/product2.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/static/assets/product1.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+              <img
+                src="/static/assets/product2.svg"
+                alt="product1"
+                class="img-fluid rounded-start swiper-slide"
+              />
+            </div>
+            <div class="swiper-button-prev">
+              <i class="fa-solid fa-less-than"></i>
+            </div>
+            <div class="swiper-button-next">
+              <i class="fa-solid fa-greater-than"></i>
+            </div>
+          </div>
+
+          <div class="product-info col-xxl-6 col-xl-6 col-lg-6 col-md-12">
+            <div class="card-body">
+              <div class="title">Product 3</div>
+              <div class="speed-max-speed">
+                <div class="speed">
+                  <h3>3.5s</h3>
+                  <br />
+                  <p>0-60mph</p>
+                </div>
+                <hr />
+                <div class="max-speed">
+                  <h3>150mph</h3>
+                  <br />
+                  <p>Top Speed</p>
+                </div>
+              </div>
+              <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit.oddndndn Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit.oddndndn
+              </div>
+              <button class="product-btn">View More</button>
+            </div>
+          </div>
+        </div>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</section>
+<!-- PRODUCTS -->
+<!-- HIGHLIGHTS -->
+{% comment %} <section class="highlights py-5">
+  <div class="sec-heading text-center">
+    <h6>Top Highlights</h6>
+  </div>
+  <!-- Slider main container -->
+ 
+  <div class="container-fluid">
+    <!-- Additional required wrapper -->
+    <div class="text-center text-1">
+      <div class=" arrange_inline_block">
+        <img src="/static/assets/Second.svg" alt="Second" />
+        <div class="title">Top Speed</div>
+      </div>
+      <div class="p-3">
+          <span class="arrange_inline c-section4" id="counterspeed">152 </span>
+          <span class="arrange_inline param_color">Km/h</span>              
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<!-- HIGHLIGHTS -->
+<!-- TEAM MEMBERS -->
+<section id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+        <div class="sec-heading text-center my-5">
+          <h6>Team Members</h6>
+        </div>
+      </div>
+    </div>
+  </div> {% endcomment %}
+  <div class="testimonial-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="team-slider owl-carousel">
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/65VQDfjs/1.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/vmCM14qL/2.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/TYTxWM9S/3.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/593GTHB7/4.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/tJCrp53r/5.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/tJCrp53r/5.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+            <div class="single-box text-center">
+              <div class="img-area">
+                <img
+                  alt=""
+                  class="img-fluid move-animation"
+                  src="https://i.postimg.cc/tJCrp53r/5.png"
+                />
+              </div>
+              <div class="info-area">
+                <h4>Person's Name</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nemo, ullam.
+                </p>
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TEAM MEMBERS -->
+
+
+{% endblock content %}
+{% include "foot.html" %}
